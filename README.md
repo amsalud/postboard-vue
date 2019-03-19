@@ -16,5 +16,5 @@ Navigate to the ui folder, and run the following commands to run in development 
 
 For build and deployment run `yarn build`
 
-## Demo Link:
-`https://spacex-launch-details.herokuapp.com/`
+### Demo Link:
+`https://post-board-vue.herokuapp.com/`
