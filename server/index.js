@@ -13,7 +13,7 @@ const posts = require('./routes/api/posts');
 app.use('/api/posts', posts);
 
 // Handle production
-if (process.env.NODE_ENV === 'prouction') {
+if (process.env.NODE_ENV === 'production') {
   // Static folder
   app.use(express.static(__dirname + '/public'));
 
