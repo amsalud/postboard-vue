@@ -28,6 +28,7 @@
       >
         {{ `${post.createdAt.getDate()}/${post.createdAt.getMonth()}/${post.createdAt.getFullYear()}` }}
         <p class="text">{{post.text}}</p>
+        <p v-on:click="deletePost(post._id)">Click to Delete</p>
       </div>
     </div>
   </div>
@@ -54,6 +55,10 @@ export default {
   methods: {
     async createPost() {
       await PostService.createPost(this.text);
+      this.posts = await PostService.getPosts();
+    },
+    async deletePost(id) {
+      await PostService.deletePost(id);
       this.posts = await PostService.getPosts();
     }
   }
